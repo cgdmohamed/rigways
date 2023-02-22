@@ -14,8 +14,6 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        //counters
-        
         $projects = Projects::all();
         return view('projects.index', compact('projects'));
     }
