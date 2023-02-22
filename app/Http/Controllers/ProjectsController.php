@@ -58,7 +58,7 @@ class ProjectsController extends Controller
         //
         //return $id;
         $projects = Projects::findOrFail($id);
-        return view('projects', compact('projects'));
+        return view('projects.single', compact('projects'));
     }
 
     /**
