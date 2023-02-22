@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('projects', [ProjectsController::class,'index'])->name('projects');
 
-Route::get('projects/create', [ProjectsController::class,'create']);
+Route::get('projects/create', [ProjectsController::class,'create'])->name('create');
 
 Route::post('projects', [ProjectsController::class,'store']);
 
