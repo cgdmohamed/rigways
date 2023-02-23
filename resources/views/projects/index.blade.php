@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-@include('projects.stats')
     <div class="px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center">
             <div class="sm:flex-auto">
@@ -84,7 +83,7 @@
                             <h3 class="mt-2 text-sm font-medium text-gray-900">No projects</h3>
                             <p class="mt-1 text-sm text-gray-500">Get started by creating a new project.</p>
                             <div class="mt-6">
-                                <a href="{{ route('create') }}"
+                                <a href="{{ route('create-project') }}"
                                     class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                     <!-- Heroicon name: mini/plus -->
                                     <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

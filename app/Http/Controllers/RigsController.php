@@ -16,21 +16,12 @@ class RigsController extends Controller
     {
         $rigs = Rigs::all();
         return view('rigs.index', compact('rigs'));
-        /*
-        $rigs = Rigs::all();
-        $content = view('rigs.index', ['rigs' => $rigs])->render();
-
-        $response = new Response($content, 200);
-        $response->header('Content-Type', 'text/html');
-
-        return $response;
-        */
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): Response
+    public function create()
     {
         //
         return view('rigs.create');
@@ -39,7 +30,7 @@ class RigsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         //
     }
@@ -47,15 +38,16 @@ class RigsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Rigs $rigs, $id): Response
+    public function show(Rigs $rigs, $id)
     {
-        return $id;
+        $rig = Rigs::findOrFail($id);
+        return view('rigs.single', compact('rig'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Rigs $rigs): Response
+    public function edit(Rigs $rigs)
     {
         //
     }
@@ -63,7 +55,7 @@ class RigsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Rigs $rigs): RedirectResponse
+    public function update(Request $request, Rigs $rigs)
     {
         //
     }
@@ -71,7 +63,7 @@ class RigsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Rigs $rigs): RedirectResponse
+    public function destroy(Rigs $rigs)
     {
         //
     }

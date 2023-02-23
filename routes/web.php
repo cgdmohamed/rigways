@@ -16,14 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 //projects routes
 
 Route::get('projects', [ProjectsController::class,'index'])->name('projects');
 
-Route::get('projects/create', [ProjectsController::class,'create'])->name('create');
+Route::get('projects/create', [ProjectsController::class,'create'])->name('create-project');
 
 Route::post('projects', [ProjectsController::class,'store']);
 
@@ -38,9 +38,9 @@ Route::delete('projects/{project}', [ProjectsController::class,'destroy']);
 //rigs routes
 //Route::get('rigs', [RigsController::class, 'index']);
 
-Route::get('/rigs', [RigsController::class, 'index']);
-/*
-Route::get('rigs/create', [RigsController::class,'create'])->name('create');
+Route::get('rigs', [RigsController::class, 'index'])->name('rigs');
+
+Route::get('rigs/create', [RigsController::class,'create'])->name('create-rig');
 
 Route::post('rigs', [RigsController::class,'store']);
 
@@ -51,4 +51,3 @@ Route::get('rigs/{rig}/edit', [RigsController::class,'edit']);
 Route::put('rigs/{rig}', [RigsController::class,'update']);
 
 Route::delete('rigs/{rig}', [RigsController::class,'destroy']);
-*/
