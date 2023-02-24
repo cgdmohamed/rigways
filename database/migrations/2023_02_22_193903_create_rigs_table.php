@@ -17,7 +17,9 @@ return new class extends Migration
             $table->integer('client_id');
             $table->string('rig_name');
             $table->string('rig_type');
+            $table->string('rig_status');
             $table->string('rig_serial')->unique();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

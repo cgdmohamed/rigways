@@ -6,6 +6,8 @@ use App\Models\Rigs;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Str;
+
 
 class RigsController extends Controller
 {
@@ -32,7 +34,25 @@ class RigsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Auto generate codes
+        // Generate a unique code with the "RG" prefix
+        $code = 'RG' . mt_rand(1000, 9999);
+
+        request()->validate([
+            'rig_name' => 'required',
+            'rig_type' => 'required',
+        ]);
+        $newRig = new Rigs();
+        $newRig->rig_name = Request('rig_name');
+        // remember to set creator id and client id
+        $newRig->creator_id =  1;
+        $newRig->client_id = 1;
+        $newRig->rig_serial = $code;
+        $newRig->rig_type = Request('rig_type');
+        $newRig->rig_status = Request('rig_status');
+        $newRig->save();
+
+        return redirect('rigs');
     }
 
     /**
@@ -63,8 +83,11 @@ class RigsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Rigs $rigs)
+    public function destroy(Rigs $rigs, $id)
     {
-        //
+        $rigs = Rigs::findOrFail($id);
+        $rigs->delete();
+
+        return redirect('rigs');
     }
 }

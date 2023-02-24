@@ -14,12 +14,12 @@
                     <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
                         <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                             <div class="sm:col-span-1">
-                                <dt class="text-sm font-medium text-gray-500">Project Manger</dt>
+                                <dt class="text-sm font-medium text-gray-500 capitalize">Project Manger</dt>
                                 <dd class="mt-1 text-sm text-gray-900">Moamen Fawaz</dd>
                             </div>
                             <div class="sm:col-span-1">
-                                <dt class="text-sm font-medium text-gray-500">Type</dt>
-                                <dd class="mt-1 text-sm text-gray-900">{{ $rig->rig_type }}</dd>
+                                <dt class="text-sm font-medium text-gray-500 ">Type</dt>
+                                <dd class="mt-1 text-sm text-gray-900 capitalize">{{ $rig->rig_type }}</dd>
                             </div>
                             <div class="sm:col-span-1">
                                 <dt class="text-sm font-medium text-gray-500">Serial Number</dt>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="sm:col-span-1">
                                 <dt class="text-sm font-medium text-gray-500">Status</dt>
-                                <dd class="mt-1 text-sm text-gray-900">Deployed</dd>
+                                <dd class="mt-1 text-sm text-gray-900 capitalize">{{ $rig->rig_status }}</dd>
                             </div>
                             <div class="sm:col-span-2">
                                 <dt class="text-sm font-medium text-gray-500">Workforce</dt>
@@ -42,6 +42,14 @@
                                 <dd class="mt-1 text-sm text-gray-500">
                                     <p class="mt-4 border-t border-gray-200 py-2">Note: Rig serial number is an internal number for system identification purpose. use this number as refernce while contacting us.</p>
                                     
+                                </dd>
+
+                                <dd>
+                                    <form method="POST" action="/rigs/{{ $rig->id }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="px-4 py-2 font-semibold text-sm bg-white text-red-700 dark:bg-slate-700 dark:text-white rounded-md shadow-sm ring-1 ring-slate-900/5 border-red-600 dark:border-sky-500 border-2 border-solid">Delete</button>
+                                    </form>
                                 </dd>
                             </div>
                         </dl>
