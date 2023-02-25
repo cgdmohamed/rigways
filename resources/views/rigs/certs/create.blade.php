@@ -16,7 +16,7 @@
                     Numbr</label>
                 <div class="mt-1 sm:col-span-2 sm:mt-0">
                     <input type="text" name="serial_no" id="serial_no"
-                        class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm">
+                        class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm py-2 px-3">
                 </div>
             </div>
 
@@ -25,7 +25,7 @@
                     Date</label>
                 <div class="mt-1 sm:col-span-2 sm:mt-0">
                     <input id="datepicker" name="issue_date"
-                        class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm"
+                        class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm py-2 px-3"
                         type="text" placeholder="Select a date">
                 </div>
             </div>
@@ -41,9 +41,11 @@
             </div>
 
             <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="certificate_file" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Upload Certificate</label>
+                <label for="certificate_file" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Upload
+                    Certificate</label>
                 <div class="mt-1 sm:col-span-2 sm:mt-0">
-                    <input type="file" name="certificate_file" class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm">
+                    <input type="file" name="certificate_file"
+                        class="rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 </div>
             </div>
 

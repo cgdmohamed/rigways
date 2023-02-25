@@ -14,4 +14,22 @@ class Rigs extends Model
 
     use SoftDeletes;
 
+    public function certificates()
+    {
+        return $this->hasMany(Certificate::class);
+    }
+
+    /**
+     * Get the project that owns the rig.
+     */
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withPivot('role');
+    }
+
 }

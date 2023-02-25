@@ -5,7 +5,7 @@
     <div class="px-4 sm:px6 lg:px-8">
         <div>
             <dl class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
-                <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+                <div class="overflow-hidden bg-white border sm:rounded-lg">
                     <div class="px-4 py-5 sm:px-6">
                         <h3 class="text-lg font-medium leading-6 text-gray-900">Project Information</h3>
                         <p class="mt-1 max-w-2xl text-sm text-gray-500">Project Full details</p>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+                <div class="overflow-hidden bg-white border sm:rounded-lg">
                     <div class="px-4 py-5 sm:px-6">
                         <h3 class="text-lg font-medium leading-6 text-gray-900">Client Information</h3>
                         <p class="mt-1 max-w-2xl text-sm text-gray-500">All project client's details</p>

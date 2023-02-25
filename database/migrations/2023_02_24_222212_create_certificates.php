@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
             // relations
-            $table->integer('project_id');
-            $table->integer('rig_id');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('rig_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('rig_id')->references('id')->on('rigs')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        
             // certificates
             $table->string('serial_no')->unique();
             $table->date('issue_date');

@@ -12,7 +12,6 @@
                 </div>
             </div>
             <div class="mt-4 flex md:mt-0 md:ml-4">
-                <!-- a href="/rigs/create" class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create</!-->
                 <a href="/rigs/create"
                     class="ml-3 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -26,10 +25,9 @@
 
     </div>
     <div class="px-4 sm:px-6 lg:px-8">
-            <div class="overflow-hidden bg-white shadow sm:rounded-md">
-              <ul role="list" class="divide-y divide-gray-200">
-              @forelse ($rigs as $rig)
-
+        <div class="overflow-hidden bg-white border sm:rounded-md">
+            <ul role="list" class="divide-y divide-gray-200">
+                @forelse ($rigs as $rig)
                     <li>
                         <a href="/rigs/{{ $rig->id }}" class="block hover:bg-gray-50">
                             <div class="flex items-center px-4 py-4 sm:px-6">
@@ -85,8 +83,8 @@
                     </li>
 
                 @empty
-              </ul>
-                @endforelse
-            </div>
+            </ul>
+            @endforelse
+        </div>
     </div>
 @endsection

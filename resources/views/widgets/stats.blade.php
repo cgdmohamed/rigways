@@ -18,7 +18,7 @@
                         <p class="text-2xl font-semibold text-gray-900">71,897</p>
                         <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                             <div class="text-sm">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> View all<span class="sr-only"> Total Projects stats</span></a>
+                                <a href="{{ route('projects') }}" class="font-medium text-indigo-600 hover:text-indigo-500"> View all<span class="sr-only"> Total Projects stats</span></a>
                             </div>
                         </div>
                     </dd>
@@ -38,7 +38,7 @@
                         <p class="text-2xl font-semibold text-gray-900">58,161</p>
                         <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                             <div class="text-sm">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> View all<span class="sr-only"> Total Certificates stats</span></a>
+                                <a href="{{ route('rigs') }}" class="font-medium text-indigo-600 hover:text-indigo-500"> View all<span class="sr-only"> Total Certificates stats</span></a>
                             </div>
                         </div>
                     </dd>

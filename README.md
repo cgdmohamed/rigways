@@ -63,3 +63,6 @@
             document.getElementById('modal').classList.toggle('hidden')
         }
         ```
+
+- {{ date('Y-m-d', strtotime($certs->issue_date)) }}
+- {{ route('certificates.download', $certs->id) }}

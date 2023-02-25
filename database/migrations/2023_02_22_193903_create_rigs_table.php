@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('rigs', function (Blueprint $table) {
             $table->id();
+            // assign project to rig
+            $table->unsignedBigInteger('project_id');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+    
             $table->integer('creator_id');
             $table->integer('client_id');
             $table->string('rig_name');

@@ -10,4 +10,14 @@ class Projects extends Model
     use HasFactory;
 
     protected $dates = ['created_at'];
+
+    public function rigs()
+    {
+        return $this->hasMany(Rig::class);
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withPivot('role');
+    }
 }
