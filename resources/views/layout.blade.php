@@ -15,8 +15,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/img/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/img/favicon-16x16.png')}}">
     <link rel="manifest" href="{{asset('assets/img/site.webmanifest')}}">
+
+    <script defer src="{{asset('assets/js/main.js')}}"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <!-- Styles -->
     @vite('resources/css/app.css')
+    <!-- JS Libraries -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 
 <body class="h-full">

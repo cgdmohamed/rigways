@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rigs;
+use App\Models\Certificates;
+
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -16,8 +18,9 @@ class RigsController extends Controller
      */
     public function index()
     {
+        $certs = Certificates::all();
         $rigs = Rigs::all();
-        return view('rigs.index', compact('rigs'));
+        return view('rigs.index', compact('rigs','certs'));
     }
 
     /**
@@ -61,7 +64,8 @@ class RigsController extends Controller
     public function show(Rigs $rigs, $id)
     {
         $rig = Rigs::findOrFail($id);
-        return view('rigs.single', compact('rig'));
+        $certs = Certificates::findOrFail($id);
+        return view('rigs.single', compact('rig','certs'));
     }
 
     /**

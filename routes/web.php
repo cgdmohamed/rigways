@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\RigsController;
+use App\Http\Controllers\CertificatesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,3 +52,23 @@ Route::get('rigs/{rig}/edit', [RigsController::class,'edit']);
 Route::put('rigs/{rig}', [RigsController::class,'update']);
 
 Route::delete('rigs/{rig}', [RigsController::class,'destroy']);
+
+// certificates routes
+
+Route::get('certs', [CertificatesController::class, 'index'])->name('certs');
+
+Route::get('certs/create-cert', [CertificatesController::class,'create'])->name('create-cert');
+
+Route::post('certs', [CertificatesController::class,'store']);
+
+Route::get('certs/{id}', [CertificatesController::class,'show']);
+
+Route::get('certs/{cert}/edit', [CertificatesController::class,'edit']);
+
+Route::put('certs/{cert}', [CertificatesController::class,'update']);
+
+Route::delete('certs/{cert}', [CertificatesController::class,'destroy']);
+
+Route::post('/certs/upload', [RigsController::class, 'upload'])->name('certs.upload');
+
+Route::get('/certificates/{id}/download', [CertificatesController::class, 'downloadCertificate'])->name('certificates.download');
