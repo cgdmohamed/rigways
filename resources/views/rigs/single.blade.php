@@ -53,7 +53,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"
-                                            class="px-4 py-2 font-semibold text-sm bg-white text-red-700 dark:bg-slate-700 dark:text-white rounded-md shadow-sm ring-1 ring-slate-900/5 border-red-600 dark:border-sky-500 border-2 border-solid">Delete</button>
+                                            class="px-4 py-2 font-semibold text-sm bg-white text-red-700 rounded-md shadow-sm ring-1 ring-slate-900/5 border-red-600 border-2 border-solid">Delete</button>
                                     </form>
                                 </dd>
                             </div>

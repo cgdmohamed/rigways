@@ -1,5 +1,3 @@
-@extends('layout')
+@extends('dashboard')
 
-@section('content')
 @include('widgets.stats')
-@endsection

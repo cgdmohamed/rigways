@@ -1,13 +1,13 @@
-@extends('layout')
+@extends('dashboard')
 
 @section('content')
-    <div class="px-4 py-6 sm:px-6 lg:px-8 sm:columns-1 md:columns-1 lg:columns-2 ">
+    <div class="px-4 py-6 sm:px-6 lg:px-8 sm:columns-1 md:columns-1 lg:columns-1 ">
 
         <div class="mt-5 md:col-span-2 md:mt-0">
 
             <form action="/rigs" method="POST">
                 @csrf
-                <div class="shadow sm:overflow-hidden sm:rounded-md">
+                <div class="sm:overflow-hidden sm:rounded-md">
                     <div class="px-4 pt-5 sm:px-6 bg-white">
                         <h3 class="text-lg font-medium leading-6 text-gray-900">Add new rig information</h3>
                         <p class="mt-1 text-sm text-gray-500">Please fill the information carfuly.</p>

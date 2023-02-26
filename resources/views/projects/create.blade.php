@@ -1,11 +1,11 @@
-@extends('layout')
+@extends('dashboard')
 
 @section('content')
 
 
 <div class="px-4 sm:px-6 lg:px-8">
-  <dl class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
-    <div class="overflow-hidden bg-white shadow sm:rounded-lg p-3">
+  <dl class="grid grid-cols-1 gap-5 sm:grid-cols-1 lg:grid-cols-1">
+    <div class="overflow-hidden bg-white sm:rounded-lg p-3">
   <form action="/projects" method="POST">
     @csrf
     <div class="space-y-8 divide-y divide-gray-200">

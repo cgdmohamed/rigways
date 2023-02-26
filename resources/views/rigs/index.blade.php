@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('dashboard')
 
 @section('content')
     <div class="px-4 py-6 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@
 
     </div>
     <div class="px-4 sm:px-6 lg:px-8">
-            <div class="overflow-hidden bg-white shadow sm:rounded-md">
+            <div class="overflow-hidden bg-white border sm:rounded-md">
               <ul role="list" class="divide-y divide-gray-200">
               @forelse ($rigs as $rig)
 
@@ -47,7 +47,7 @@
                                                         clip-rule="evenodd" />
                                                 </svg>
 
-                                                <span class="truncate">{{ $rig->rig_type }}</span>
+                                                <span class="truncate capitalize">{{ $rig->rig_type }}</span>
                                             </p>
                                         </div>
                                         <div class="hidden md:block">
