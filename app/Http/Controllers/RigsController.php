@@ -63,9 +63,8 @@ class RigsController extends Controller
      */
     public function show(Rigs $rigs, $id)
     {
-        $rig = Rigs::findOrFail($rigs);
-        $certs = Certificates::findOrFail($id);
-        return view('rigs.single', compact('rig','certs'));
+        $rig = Rigs::findOrFail($id);
+        return view('rigs.single', compact('rig'));
     }
 
     /**

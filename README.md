@@ -62,4 +62,8 @@
         function toggleModal() {
             document.getElementById('modal').classList.toggle('hidden')
         }
-        ```
+```
+- download link
+    ```php
+    {{ route('certificates.download', $certs->id) }}
+    ```

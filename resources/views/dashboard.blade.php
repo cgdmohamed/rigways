@@ -14,7 +14,6 @@
                         @else
                             @include('widgets.welcome')
                             @include('widgets.stats')
-                            
                         @endif
                 </div>
             </div>

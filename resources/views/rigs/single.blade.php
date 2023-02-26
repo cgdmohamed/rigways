@@ -1,11 +1,11 @@
-@extends('layout')
+@extends('dashboard')
 
 @section('content')
     <div class="mt-8 grid max-w-8xl grid-cols-1 gap-6 sm:px-6 lg:w-full lg:grid-flow-col-dense lg:grid-cols-3">
         <div class="lg:col-span-1 lg:col-start-3">
             <!-- Description list-->
             <section aria-labelledby="rig-information-title">
-                <div class="bg-white shadow sm:rounded-lg">
+                <div class="bg-white border sm:rounded-lg">
                     <div class="px-4 py-5 sm:px-6">
                         <h2 id="rig-information-title" class="text-lg font-medium leading-6 text-gray-900">
                             {{ $rig->rig_name }}'s Information</h2>
@@ -33,11 +33,11 @@
                                 <dt class="text-sm font-medium text-gray-500">Workforce</dt>
 
                                 <dd class="mt-1 text-sm text-gray-500"> <span
-                                        class="inline-flex rounded-full bg-blue-100 px-2 text-xs font-semibold leading-5 text-blue-800">Ahmed
+                                        class="inline-flex rounded-full bg-blue-100 px-2 my-1 text-xs font-semibold leading-5 text-blue-800">Ahmed
                                         Mohamed</span> , <span
-                                        class="inline-flex rounded-full bg-blue-100 px-2 text-xs font-semibold leading-5 text-blue-800">Mohamed
+                                        class="inline-flex rounded-full bg-blue-100 my-1 px-2 text-xs font-semibold leading-5 text-blue-800">Mohamed
                                         Mostafa</span> , <span
-                                        class="inline-flex rounded-full bg-blue-100 px-2 text-xs font-semibold leading-5 text-blue-800">Sayed
+                                        class="inline-flex rounded-full bg-blue-100 my-1 px-2 text-xs font-semibold leading-5 text-blue-800">Sayed
                                         Ali</span>
                                 </dd>
 
@@ -65,7 +65,7 @@
         </div>
 
         <section aria-labelledby="cert-title" class="space-y-6 lg:col-span-2 lg:col-start-1">
-            <div class="bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
+            <div class="bg-white px-4 py-5 border sm:rounded-lg sm:px-6">
                 <!-- Certificate table -->
                 <div class="flow-root ">
                     <!-- This example requires Tailwind CSS v2.0+ -->
@@ -167,16 +167,16 @@
                                             <tr>
                                                 <td
                                                     class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                                                    {{ $certs->serial_no }}</td>
+                                                   SN1010</td>
                                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                                    {{ date('Y-m-d', strtotime($certs->issue_date)) }}
+                                                    21-2-2023
                                                 </td>
                                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                                    {{ date('Y-m-d', strtotime($certs->expiry_date)) }}</td>
+                                                    21-2-2023</td>
                                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-green-600">
                                                     <span
                                                         class="inline-flex rounded-full px-2 text-xs font-semibold leading-5 bg-green-100 text-green-800">
-                                                        {{ $certs->cert_status }}
+                                                        Vaild
                                                     </span>
                                                 </td>
                                                 <td
@@ -189,7 +189,7 @@
                                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                                 d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                                                         </svg><span class="sr-only">SN15159</span></a>
-                                                    <a href="{{ route('certificates.download', $certs->id) }}"
+                                                    <a href="#"
                                                         class="text-indigo-600 hover:text-indigo-900 float-right pr-2">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
